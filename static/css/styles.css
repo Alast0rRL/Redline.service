@@ -25,10 +25,10 @@
     content: '';
     position: absolute;
     width: 2px;
-    height: 150%;
+    height: 300%; /* Make lines much longer */
     background-color: #C4001D;
-    top: -25%;
-    animation: moveLines 10s linear infinite;
+    top: -100%; /* Adjust top position to keep them centered */
+    animation: moveLines 10s linear infinite alternate; /* Add 'alternate' for smooth back-and-forth */
     opacity: 0.4;
     box-shadow: 0 0 15px #C4001D;
 }
