@@ -1,0 +1,181 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Hero Section -->
+<section id="hero" class="relative h-screen flex items-center justify-center text-center overflow-hidden bg-white dark:bg-dark-bg">
+    <div class="animated-lines"></div>
+    <div class="relative z-20 px-4">
+        <h1 class="text-5xl md:text-7xl font-montserrat font-bold text-gray-900 dark:text-white">Ваш ремонт — как на ладони</h1>
+        <p class="text-8xl md:text-9xl font-montserrat font-black tracking-wider text-redline-red my-4">RedLine</p>
+        <p class="text-2xl md:text-4xl font-montserrat font-bold mt-2 text-redline-red">Мы запишем весь процесс на видео</p>
+        <p class="mt-4 text-lg md:text-xl text-gray-500 dark:text-light-gray">Получите полную видеозапись ремонта вашей техники в Redline Service</p>
+        <div class="mt-8 space-x-4">
+            <a href="#contact-form" class="bg-redline-red text-white font-bold py-3 px-8 rounded-md hover:shadow-[0_0_20px_rgba(196,0,29,0.9)] transition-all duration-300">Заказать ремонт</a>
+            <a href="#video" class="text-gray-800 dark:text-white font-bold py-3 px-8 border-2 border-gray-400 dark:border-light-gray rounded-md hover:bg-gray-200 dark:hover:bg-light-gray hover:text-dark-bg transition-all duration-300">Смотреть видео</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Us Section -->
+<section id="about" class="py-20 bg-gray-50 dark:bg-gray-900/50">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-montserrat font-bold">Кто мы такие?</h2>
+        <div class="w-24 h-1 bg-redline-red mx-auto mt-4 mb-8"></div>
+        <p class="max-w-3xl mx-auto text-gray-600 dark:text-light-gray leading-relaxed">
+            Redline Service — это не просто мастерская. Наша философия — 100% прозрачность, подтвержденная делом. Мы — единственный сервис в Октябрьском, который записывает каждый ремонт на видео от начала и до конца. Вы увидите всё: от диагностики до замены деталей и финальной проверки.
+        </p>
+        <div class="grid md:grid-cols-4 gap-8 mt-12 text-center">
+            <div class="p-6 bg-white dark:bg-dark-bg rounded-lg shadow-md dark:border dark:border-gray-800">
+                <h3 class="text-2xl font-montserrat text-redline-red">Надёжность</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">Используем только проверенные запчасти и даём гарантию на все работы.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-dark-bg rounded-lg shadow-md dark:border dark:border-gray-800">
+                <h3 class="text-2xl font-montserrat text-redline-red">Скорость</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">Ценим ваше время, поэтому выполняем ремонт в кратчайшие сроки.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-dark-bg rounded-lg shadow-md dark:border dark:border-gray-800">
+                <h3 class="text-2xl font-montserrat text-redline-red">Экспертность</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">Наша команда — сертифицированные специалисты с многолетним опытом.</p>
+            </div>
+            <div class="p-6 bg-white dark:bg-dark-bg rounded-lg shadow-md dark:border dark:border-gray-800">
+                <h3 class="text-2xl font-montserrat text-redline-red">Прозрачность 100%</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">Мы записываем весь процесс ремонта на видео. Вы получаете полную запись и видите всё своими глазами.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How It Works Section -->
+<section id="how-it-works" class="py-20 bg-white dark:bg-dark-bg">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-montserrat font-bold">Как это работает?</h2>
+        <div class="w-24 h-1 bg-redline-red mx-auto mt-4 mb-8"></div>
+        <div class="grid md:grid-cols-3 gap-8 mt-12 text-left">
+            <div class="p-6 bg-gray-50 dark:bg-dark-gray rounded-lg border border-gray-200 dark:border-gray-800">
+                <p class="text-5xl font-montserrat text-redline-red/50">01</p>
+                <h3 class="text-2xl font-montserrat mt-4">Сдаете технику</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">Вы привозите устройство к нам в сервис или вызываете курьера. Мы оформляем заказ.</p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-dark-gray rounded-lg border border-gray-200 dark:border-gray-800">
+                <p class="text-5xl font-montserrat text-redline-red/50">02</p>
+                <h3 class="text-2xl font-montserrat mt-4">Снимаем видео</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">Мастер проводит диагностику и выполняет ремонт под записью с нескольких камер.</p>
+            </div>
+            <div class="p-6 bg-gray-50 dark:bg-dark-gray rounded-lg border border-gray-200 dark:border-gray-800">
+                <p class="text-5xl font-montserrat text-redline-red/50">03</p>
+                <h3 class="text-2xl font-montserrat mt-4">Получаете отчет</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">По окончании работ мы отправляем вам ссылку на полную видеозапись вашего ремонта.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services" class="py-20 bg-gray-50 dark:bg-gray-900/50">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-montserrat font-bold">Наши Услуги</h2>
+        <div class="w-24 h-1 bg-redline-red mx-auto mt-4 mb-8"></div>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+            {% for service in services | slice(3) %}
+            <div class="bg-white dark:bg-dark-gray rounded-lg overflow-hidden group shadow-md dark:border dark:border-gray-800">
+                <div class="p-6">
+                    <h3 class="text-2xl font-montserrat">{{ service.name }}</h3>
+                    <p class="mt-2 text-gray-600 dark:text-light-gray">{{ service.description }}</p>
+                    <a href="{{ url_for('services') }}" class="inline-block mt-4 text-redline-red font-bold group-hover:translate-x-2 transition-transform duration-300">Подробнее →</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+         <a href="{{ url_for('services') }}" class="inline-block mt-12 text-gray-800 dark:text-white font-bold py-3 px-8 border-2 border-redline-red rounded-md hover:bg-redline-red hover:text-white dark:hover:text-white hover:shadow-[0_0_15px_rgba(196,0,29,0.8)] transition-all duration-300">Все услуги</a>
+    </div>
+</section>
+
+<!-- YouTube/RUTUBE Section -->
+<section id="video" class="py-20 bg-white dark:bg-dark-bg">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-montserrat font-bold">Так будет выглядеть видео вашего ремонта</h2>
+        <div class="w-24 h-1 bg-redline-red mx-auto mt-4 mb-8"></div>
+        <div class="grid md:grid-cols-2 gap-8 mt-12 items-center">
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full rounded-lg shadow-lg"></iframe>
+            </div>
+            <div class="text-left">
+                <h3 class="text-3xl font-montserrat">Наш последний кейс</h3>
+                <p class="mt-4 text-gray-600 dark:text-light-gray leading-relaxed">В этом видео мы показываем полный процесс ремонта [название техники] от диагностики до финальной проверки. Вы увидите, какие детали мы используем и как решаем сложные задачи. Подписывайтесь на наш канал, чтобы не пропустить новые видео!</p>
+                <a href="{{ url_for('video') }}" class="inline-block mt-6 text-redline-red font-bold hover:translate-x-2 transition-transform duration-300">Смотреть все видео →</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="py-20 bg-gray-50 dark:bg-gray-900/50">
+    <div class="container mx-auto px-6 text-center">
+        <h2 class="text-4xl font-montserrat font-bold">Что говорят клиенты</h2>
+        <div class="w-24 h-1 bg-redline-red mx-auto mt-4 mb-8"></div>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div class="bg-white dark:bg-dark-gray p-8 rounded-lg shadow-md dark:border dark:border-gray-800">
+                <p class="text-gray-600 dark:text-light-gray italic">"Сделали все быстро, как и обещали. Ноутбук теперь летает. Отдельное спасибо за честность — не навязывали лишних услуг."</p>
+                <p class="mt-4 font-bold text-gray-900 dark:text-white">— Александр П.</p>
+            </div>
+            <div class="bg-white dark:bg-dark-gray p-8 rounded-lg shadow-md dark:border dark:border-gray-800">
+                <p class="text-gray-600 dark:text-light-gray italic">"Машина дергалась при разгоне, никто не мог найти причину. В Redline разобрались за пару часов. Настоящие профи!"</p>
+                <p class="mt-4 font-bold text-gray-900 dark:text-white">— Сергей В.</p>
+            </div>
+            <div class="bg-white dark:bg-dark-gray p-8 rounded-lg shadow-md dark:border dark:border-gray-800">
+                <p class="text-gray-600 dark:text-light-gray italic">"Очень понравился подход. Показали видео, что именно сломалось в стиралке. Теперь буду обращаться только сюда."</p>
+                <p class="mt-4 font-bold text-gray-900 dark:text-white">— Елена К.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section id="contact-form" class="py-20 bg-white dark:bg-dark-bg">
+    <div class="container mx-auto px-6">
+        <div class="text-center">
+            <h2 class="text-4xl font-montserrat font-bold">Остались вопросы?</h2>
+            <p class="text-gray-600 dark:text-light-gray mt-2">Оставьте заявку, и мы свяжемся с вами в ближайшее время.</p>
+        </div>
+        <div class="max-w-2xl mx-auto mt-12">
+            <form action="{{ url_for('contact') }}" method="POST">
+                <div class="grid md:grid-cols-2 gap-6">
+                    <input type="text" name="name" placeholder="Ваше имя" class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md py-3 px-4 text-gray-800 dark:text-white focus:outline-none focus:border-redline-red dark:focus:border-redline-red" required>
+                    <input type="tel" name="phone" placeholder="Ваш телефон" class="w-full bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md py-3 px-4 text-gray-800 dark:text-white focus:outline-none focus:border-redline-red dark:focus:border-redline-red" required>
+                </div>
+                <select name="repair_type" class="w-full mt-6 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md py-3 px-4 text-gray-800 dark:text-white focus:outline-none focus:border-redline-red dark:focus:border-redline-red">
+                    <option>Выберите тип ремонта</option>
+                    <option>Ремонт ПК/Ноутбука</option>
+                    <option>Ремонт бытовой техники</option>
+                    <option>Ремонт авто</option>
+                    <option>Другое</option>
+                </select>
+                <textarea name="message" placeholder="Кратко опишите проблему" rows="4" class="w-full mt-6 bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-md py-3 px-4 text-gray-800 dark:text-white focus:outline-none focus:border-redline-red dark:focus:border-redline-red" required></textarea>
+                <div class="text-center mt-6">
+                    <button type="submit" class="bg-redline-red text-white font-bold py-3 px-8 rounded-md hover:shadow-[0_0_20px_rgba(196,0,29,0.9)] transition-all duration-300">Отправить заявку</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Redline Speed Timer & Warranty -->
+<section class="py-20 bg-gray-50 dark:bg-gray-900/50">
+    <div class="container mx-auto px-6">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h3 class="text-3xl font-montserrat">Redline Speed Timer</h3>
+                <p class="text-gray-600 dark:text-light-gray mt-2">Среднее время выполнения заказа на сегодня:</p>
+                <div id="speed-timer" class="text-6xl font-montserrat text-redline-red my-4">03:45:12</div>
+                <p class="text-sm text-gray-500 dark:text-gray-400">*Таймер показывает среднее время от приема заказа до его выполнения за последние 24 часа.</p>
+            </div>
+            <div class="bg-white dark:bg-dark-gray p-8 rounded-lg shadow-md dark:border dark:border-gray-800">
+                <h3 class="text-3xl font-montserrat">Redline Warranty+</h3>
+                <p class="text-gray-600 dark:text-light-gray mt-4">Мы уверены в качестве своей работы, поэтому предоставляем расширенную гарантию <span class="text-gray-900 dark:text-white font-bold">до 12 месяцев</span> на все виды ремонта. Ваша техника в надежных руках.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+
+{% extends 'base.html' %}
+{% block title %}О нас — Redline Service{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-6 py-12">
+    <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-montserrat font-bold">Наша миссия — честный сервис</h1>
+        <p class="max-w-3xl mx-auto text-gray-600 dark:text-light-gray mt-4 leading-relaxed">
+            Мы основали Redline Service с одной простой целью: предоставлять услуги по ремонту, которым можно доверять. Мы устали от непрозрачных цен, скрытых платежей и некомпетентных мастеров. Наша команда — это наша семья, и мы относимся к технике каждого клиента как к своей собственной.
+        </p>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="grid md:grid-cols-3 gap-8 text-center my-16">
+        <div>
+            <p class="text-5xl font-montserrat text-redline-red">7+</p>
+            <p class="text-gray-500 dark:text-light-gray mt-2">Лет на рынке</p>
+        </div>
+        <div>
+            <p class="text-5xl font-montserrat text-redline-red">5000+</p>
+            <p class="text-gray-500 dark:text-light-gray mt-2">Успешных ремонтов</p>
+        </div>
+        <div>
+            <p class="text-5xl font-montserrat text-redline-red">4.9/5</p>
+            <p class="text-gray-500 dark:text-light-gray mt-2">Средний рейтинг</p>
+        </div>
+    </div>
+
+    <!-- Team Section -->
+    <div class="text-center my-16">
+        <h2 class="text-4xl font-montserrat font-bold">Наша команда</h2>
+        <div class="w-24 h-1 bg-redline-red mx-auto mt-4 mb-8"></div>
+        <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div class="text-center">
+                <div class="w-40 h-40 rounded-full mx-auto mb-4 bg-gray-200 dark:bg-gray-700"></div>
+                <h3 class="text-xl font-montserrat">Иван Иванов</h3>
+                <p class="text-redline-red">Главный инженер</p>
+            </div>
+            <div class="text-center">
+                <div class="w-40 h-40 rounded-full mx-auto mb-4 bg-gray-200 dark:bg-gray-700"></div>
+                <h3 class="text-xl font-montserrat">Петр Петров</h3>
+                <p class="text-redline-red">Специалист по автоэлектрике</p>
+            </div>
+            <div class="text-center">
+                <div class="w-40 h-40 rounded-full mx-auto mb-4 bg-gray-200 dark:bg-gray-700"></div>
+                <h3 class="text-xl font-montserrat">Анна Сидорова</h3>
+                <p class="text-redline-red">Менеджер по работе с клиентами</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

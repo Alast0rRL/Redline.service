@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>{% block title %}Redline Service — Быстро. Честно. По делу.{% endblock %}</title>
+    <meta name="description" content="Комплексный ремонт техники и автомобилей в Октябрьском. Гарантия качества, прозрачные цены и реальные видеоотчеты о нашей работе.">
+    <meta name="keywords" content="ремонт пк, ремонт ноутбуков, ремонт стиральных машин, ремонт холодильников, диагностика авто, автоэлектрик, Октябрьский">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Redline Service — Быстро. Честно. По делу.">
+    <meta property="og:description" content="Надежный сервис по ремонту техники и авто в Октябрьском.">
+    <meta property="og:image" content="{{ url_for('static', filename='img/og-image.jpg') }}"> <!-- Make sure to create this image -->
+    <meta property="og:url" content="{{ request.url }}">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ url_for('static', filename='img/logo.svg') }}" type="image/svg+xml">
+
+    <!-- Stylesheets -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class', // Enable class-based dark mode
+            theme: {
+                extend: {
+                    colors: {
+                        'redline-red': '#C4001D',
+                        'dark-bg': '#111111',
+                        'light-gray': '#AAAAAA',
+                        'dark-gray': '#1f2937' // For dark mode cards
+                    },
+                    fontFamily: {
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                        'open-sans': ['Open Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <script>
+        // Apply theme from localStorage before page load to prevent flickering
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+</head>
+<body class="bg-white text-gray-800 dark:bg-dark-bg dark:text-white font-open-sans transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="bg-white/80 dark:bg-dark-bg/80 backdrop-blur-sm sticky top-0 z-50 border-b border-gray-200 dark:border-gray-800">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="{{ url_for('home') }}" class="flex items-center space-x-2">
+                <img src="{{ url_for('static', filename='img/logo.svg') }}" alt="Redline Logo" class="h-8 w-8">
+                <span class="text-2xl font-montserrat font-bold text-gray-900 dark:text-white">Redline<span class="text-redline-red">.</span>service</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="{{ url_for('home') }}" class="text-gray-600 dark:text-gray-300 hover:text-redline-red dark:hover:text-redline-red transition-colors duration-300">Главная</a>
+                <a href="{{ url_for('services') }}" class="text-gray-600 dark:text-gray-300 hover:text-redline-red dark:hover:text-redline-red transition-colors duration-300">Услуги</a>
+                <a href="{{ url_for('about') }}" class="text-gray-600 dark:text-gray-300 hover:text-redline-red dark:hover:text-redline-red transition-colors duration-300">О нас</a>
+                <a href="{{ url_for('video') }}" class="text-gray-600 dark:text-gray-300 hover:text-redline-red dark:hover:text-redline-red transition-colors duration-300">Видео</a>
+                <a href="{{ url_for('contact') }}" class="text-gray-600 dark:text-gray-300 hover:text-redline-red dark:hover:text-redline-red transition-colors duration-300">Контакты</a>
+                <button id="theme-toggle" class="text-gray-600 dark:text-gray-300 hover:text-redline-red dark:hover:text-redline-red">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 5.05a1 1 0 010 1.414l-.707.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM3 11a1 1 0 100-2H2a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+            </div>
+            <a href="#contact-form" class="hidden md:inline-block text-gray-900 dark:text-white font-bold py-2 px-4 border-2 border-redline-red rounded-md hover:bg-redline-red hover:text-white dark:hover:text-white hover:shadow-[0_0_15px_rgba(196,0,29,0.8)] transition-all duration-300">Заказать ремонт</a>
+            <button id="mobile-menu-button" class="md:hidden text-gray-900 dark:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-bg">
+            <a href="{{ url_for('home') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Главная</a>
+            <a href="{{ url_for('services') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Услуги</a>
+            <a href="{{ url_for('about') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">О нас</a>
+            <a href="{{ url_for('video') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Видео</a>
+            <a href="{{ url_for('contact') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Контакты</a>
+             <a href="#contact-form" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Заказать ремонт</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-100 dark:bg-gray-900/50 py-12">
+        <div class="container mx-auto px-6 text-center text-gray-500 dark:text-light-gray">
+            <p>&copy; 2025 Redline Service. Все права защищены.</p>
+            <p class="mt-2">г. Октябрьский, ул. Такая-то, д. 1</p>
+            <p>+7 (999) 123-45-67</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

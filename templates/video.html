@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+{% block title %}Видео наших работ — Redline Service{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-6 py-12">
+    <div class="text-center mb-12">
+        <h1 class="text-4xl md:text-5xl font-montserrat font-bold">Галерея наших работ</h1>
+        <p class="text-gray-600 dark:text-light-gray mt-2">Прозрачность в действии: смотрите, как мы возвращаем вашу технику к жизни.</p>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="grid md:grid-cols-2 gap-8">
+        <!-- Video 1 -->
+        <div class="bg-white dark:bg-dark-gray rounded-lg overflow-hidden shadow-md dark:border dark:border-gray-800">
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-montserrat">Полная переборка игрового ПК</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">В этом видео мы показываем процесс чистки, замены термопасты и апгрейда игрового компьютера.</p>
+            </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="bg-white dark:bg-dark-gray rounded-lg overflow-hidden shadow-md dark:border dark:border-gray-800">
+            <div class="aspect-w-16 aspect-h-9">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL_D-dE3d_aWEX2s_iI8H5f_trK5c2M7-s" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="w-full h-full"></iframe>
+            </div>
+            <div class="p-6">
+                <h3 class="text-2xl font-montserrat">Диагностика и ремонт генератора</h3>
+                <p class="mt-2 text-gray-600 dark:text-light-gray">На примере автомобиля Lada Vesta показываем, как найти и устранить неисправность генератора.</p>
+            </div>
+        </div>
+
+        <!-- Add more videos as needed -->
+
+    </div>
+</div>
+{% endblock %}
