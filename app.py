@@ -1,12 +1,17 @@
-
 import json
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
 def load_services():
-    with open('data/services.json', 'r', encoding='utf-8') as f:
-        return json.load(f)
+    # Убедитесь, что файл services.json существует в каталоге data/
+    # Иначе приложение не запустится
+    try:
+        with open('data/services.json', 'r', encoding='utf-8') as f:
+            return json.load(f)
+    except FileNotFoundError:
+        print("ERROR: data/services.json not found. Returning empty services list.")
+        return []
 
 @app.route('/')
 def home():
@@ -38,5 +43,6 @@ def contact():
     return render_template('contact.html', success=False)
 
 if __name__ == '__main__':
-    app.run(debug=True)
-
+    # >>> ИЗМЕНЕНИЕ ЗДЕСЬ: Добавлен параметр host='0.0.0.0'
+    # Это позволяет подключаться с любого IP-адреса, а не только с localhost (127.0.0.1).
+    app.run(debug=True, host='0.0.0.0')
