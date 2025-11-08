@@ -43,6 +43,5 @@ def contact():
     return render_template('contact.html', success=False)
 
 if __name__ == '__main__':
-    # >>> ИЗМЕНЕНИЕ ЗДЕСЬ: Добавлен параметр host='0.0.0.0'
-    # Это позволяет подключаться с любого IP-адреса, а не только с localhost (127.0.0.1).
-    app.run(debug=True, host='0.0.0.0')
+    # ...
+    app.run(debug=True, host='0.0.0.0', port=8080)
