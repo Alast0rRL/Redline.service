@@ -79,6 +79,23 @@
     }
 }
 
+.custom-red-bg {
+    background-color: #ececec; /* red-500 */
+}
+
+.dark .custom-red-bg {
+    background-color: #181818; /* red-800 */
+}
+
+.custom-red-inner-bg {
+    background-color: #fca5a5; /* red-300 */
+}
+
+.dark .custom-red-inner-bg {
+    background-color: #111111; /* red-700 */
+}
+
+
 /* Mobile Styles */
 @media (max-width: 768px) {
     .animated-lines {
