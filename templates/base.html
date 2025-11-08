@@ -83,13 +83,23 @@
             </button>
         </nav>
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-bg">
-            <a href="{{ url_for('home') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Главная</a>
-            <a href="{{ url_for('services') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Услуги</a>
-            <a href="{{ url_for('about') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">О нас</a>
-            <a href="{{ url_for('video') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Видео</a>
-            <a href="{{ url_for('contact') }}" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Контакты</a>
-             <a href="#contact-form" class="block py-2 px-4 text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Заказать ремонт</a>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-dark-bg border-t border-gray-200 dark:border-gray-800">
+            <div class="border-b border-gray-200 dark:border-gray-800">
+                <a href="{{ url_for('home') }}" class="block py-3 px-6 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Главная</a>
+            </div>
+            <div class="border-b border-gray-200 dark:border-gray-800">
+                <a href="{{ url_for('services') }}" class="block py-3 px-6 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Услуги</a>
+            </div>
+            <div class="border-b border-gray-200 dark:border-gray-800">
+                <a href="{{ url_for('about') }}" class="block py-3 px-6 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">О нас</a>
+            </div>
+            <div class="border-b border-gray-200 dark:border-gray-800">
+                <a href="{{ url_for('video') }}" class="block py-3 px-6 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Видео</a>
+            </div>
+            <div class="border-b border-gray-200 dark:border-gray-800">
+                <a href="{{ url_for('contact') }}" class="block py-3 px-6 text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Контакты</a>
+            </div>
+             <a href="#contact-form" class="block text-center py-3 px-6 mt-2 mb-4 mx-4 bg-redline-red text-white font-bold rounded-md hover:shadow-[0_0_20px_rgba(196,0,29,0.9)] transition-all duration-300">Заказать ремонт</a>
         </div>
     </header>
 
